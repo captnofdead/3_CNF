@@ -1,15 +1,12 @@
 # 3_CNF
 
-This Repository Contains the Code for 3_CNF SAT Solver Using Genetic algorithm. There are better algorithms that exist to solve the given problem, I tried to showcase the uses of Genetic algorithm as a searching algorithm. <br />
+This repository contains code for a 3-CNF SAT solver using a genetic algorithm. While there may be better algorithms for solving this problem, this implementation aims to demonstrate the use of a genetic algorithm as a search technique. <br />
+The algorithm begins by generating a random population of N candidates (where N=40 in this case), with each candidate representing a list of binary values for the variables in the CNF statement. The algorithm then follows the steps described below:
 
-The algoithm generates a random population of N(here N = 40) candiates, each candidate being a list of x(variables in the CNF statement) number of binary values, then it follows the steps given below
-* The algorithm performs the reproduction state, where it stochastically selects 2 parents to produce a child. for weights of the stochastic selection process, fitness value is used which is the number of clauses satisfied by the candidate.
-
-* Each child is made by chosing a crossover point and appending the prefix of one parent and suffix of the other parent till the crossover point.
-
-* After the reproduction stage, the old population is updated by this new population of children, and out of all the children the best fitness value child is compared to the global best candidate which is updated accordingly if needed.
-
-The algorithm performs the above three tasks until it runs out of the number of iterations or all the clauses of the CNF is satisfied.
+* The algorithm performs the reproduction stage, where it stochastically selects two parents to produce a child. The fitness value, which is the number of clauses satisfied by the candidate, is used as the weight for the stochastic selection process.
+* Each child is created by choosing a crossover point and combining the prefix of one parent with the suffix of the other parent up to that point.
+* After the reproduction stage, the old population is updated with the new population of children. The child with the best fitness value is compared to the global best candidate, and the global best is updated if needed.
+* The algorithm repeats these steps until it reaches the maximum number of iterations or all clauses in the CNF statement are satisfied.
 
 ## Optimizations
 
